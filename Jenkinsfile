@@ -6,7 +6,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'docker build -t abc/nodejsapp:2.0 .'
+        sh 'docker build -t subham2920/sddey2920:2.0 .'
       }
     }
     stage('Login') {
