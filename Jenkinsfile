@@ -22,9 +22,8 @@ pipeline {
     }*/
     stage('EC2'){
       steps{
-        sh """
-        #!/bin/bash
-        ssh -tt ec2-user@43.205.243.213 && docker --version"""
+       sh 'echo "private key at $EC2_CREDENTIALS"'
+       sh 'echo "user at $EC2_CREDENTIALS_USR"'
       }
     }
   }
