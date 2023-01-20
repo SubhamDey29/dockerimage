@@ -22,7 +22,9 @@ pipeline {
     }*/
     stage('EC2'){
       steps{
-        sh """ssh -tt ec2-user@43.205.243.213 && docker --version"""
+        sh """
+        #!/bin/bash
+        ssh -tt ec2-user@43.205.243.213 && docker --version"""
       }
     }
   }
