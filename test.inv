@@ -1,0 +1,2 @@
+[testserver]
+43.204.25.184  ansible_user=ec2-user
