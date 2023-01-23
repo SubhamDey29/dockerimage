@@ -20,10 +20,10 @@ pipeline {
         sh 'docker push subham2920/sddey2920:2.0'
       }
     }*/
-    stage('EC2'){
+    stage('Ansible'){
       steps{
-       sh 'echo "private key at $EC2_CREDENTIALS"'
-       sh 'echo "user at $EC2_CREDENTIALS_USR"'
+          ansiblePlaybook credentialsId: '43.205.243.213', disableHostKeyChecking: true, installation: 'ansible', inventory: 'test.inv', playbook: 'docker-ansible.yml'
+       
       }
     }
   }
