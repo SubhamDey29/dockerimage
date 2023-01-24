@@ -22,7 +22,7 @@ pipeline {
     }*/
     stage('Ansible'){
       steps{
-          ansiblePlaybook credentialsId: '43.205.243.213', disableHostKeyChecking: true, installation: 'ansible', inventory: 'test.inv', playbook: 'docker-ansible.yml'
+          ansiblePlaybook credentialsId: 'ssh', disableHostKeyChecking: true, installation: 'ansible', inventory: 'test.inv', playbook: 'docker-ansible.yml'
        
       }
     }
