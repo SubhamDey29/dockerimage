@@ -1,5 +1,5 @@
 ---
-- hosts: testserver
+- hosts: all
   become: True
   tasks:
    - name: pulling image
