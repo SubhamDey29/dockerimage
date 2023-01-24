@@ -3,7 +3,7 @@
   become: True
   tasks:
    - name: pulling image
-     command: docker pull subham2920/sddey2920:2.0
+     command: docker pull subham2920/sddey2920:3.0
    
    - name: run
-     command: docker run -p 3000:3000 subham2920/sddey2920:2.0
+     command: docker run -p 3000:3000 subham2920/sddey2920:3.0
